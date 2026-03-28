@@ -8,6 +8,11 @@ This is a tutorial repository for a design team learning to build React applicat
 
 When a student opens this project for the first time, greet them warmly and walk them through each step below in order. Do not skip ahead. Confirm each step succeeds before moving to the next.
 
+### Step 0 — Node.js (if asked before cloning)
+A student may ask you to check or install Node.js before the project is open — that's expected. Run `node -v`:
+- v20 or later: confirm they're good and move on.
+- Missing or outdated: direct them to https://nodejs.org (LTS version). Once installed, ask them to restart Terminal and confirm with `node -v` before continuing.
+
 ### Step 1 — Check Node.js
 Run `node -v` and confirm the version is v20 or later.
 - If it is: tell them they're good and move on.

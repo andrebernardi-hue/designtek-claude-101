@@ -1,92 +1,82 @@
 # How to Install — DesignTek 101
 
-Welcome. This document walks you through everything you need to do to get set up for the tutorial — step by step, in order. You will be working inside **Claude Code**, an AI-powered terminal app. Claude will be your co-pilot throughout the class.
+Welcome. This document walks you through everything you need to do to get set up for the tutorial — step by step, in order. You will be working inside **Claude Code**, an AI-powered terminal that becomes your co-pilot for the entire class.
 
 By the end of this guide, you will have a working web app running live in your browser, ready to build on.
 
 ---
 
-## Before you start
+## Step 1 — Install Claude Code
 
-You need two things installed on your Mac:
+Claude Code is the only thing you need to install manually. It runs in your Mac's Terminal app.
 
-### 1. Node.js
-Node.js is the engine that runs your app locally.
-
-1. Go to https://nodejs.org
-2. Download the **LTS** version (the one labeled "Recommended For Most Users")
-3. Open the downloaded file and follow the installer
-4. When it's done, open your Terminal app and type:
-   ```
-   node -v
-   ```
-   You should see a version number like `v20.x.x`. If you do, you're good.
-
-### 2. Claude Code
-Claude Code is the AI terminal you'll use throughout the class.
-
-1. Install it by running this in Terminal:
+1. Open **Terminal** (you can find it in Applications → Utilities, or search for it with Cmd+Space)
+2. Paste this command and press Enter:
    ```
    npm install -g @anthropic-ai/claude-code
    ```
-2. Then launch it:
+
+   > **If you see an error like `npm: command not found`**, it means Node.js is not yet installed. In that case, go to https://nodejs.org, download the **LTS** version, run the installer, restart Terminal, and then run the command above again.
+
+3. Once it's installed, launch Claude Code:
    ```
    claude
    ```
-3. Follow the login steps to connect your Anthropic account.
+
+4. Follow the login steps to connect your Anthropic account. Claude will guide you through it.
 
 ---
 
-## Step 1 — Clone the repository
+## Step 2 — Ask Claude to install Node.js
 
-Open Terminal and run:
+Node.js is the engine that runs your app locally. Once you're inside Claude Code, ask it to check and install Node.js for you.
 
-```bash
-git clone https://github.com/andrebernardi-hue/designtek-claude-101.git
-cd designtek-claude-101
-```
+**What you type to Claude:**
+> *"Can you check if Node.js is installed and install it if needed?"*
 
-This downloads the entire project to your computer.
+**What Claude does:** checks your Node.js version. If it's missing or outdated, it will walk you through installing it — usually by pointing you to https://nodejs.org or running the install for you directly.
 
----
-
-## Step 2 — Open the project in Claude Code
-
-While inside the project folder, launch Claude Code:
-
-```bash
-claude
-```
-
-**What happens next:** Claude will read the project automatically and greet you. It knows this is a tutorial project and it knows what you need to do. You don't need to explain anything — just follow what it says.
-
-> If Claude doesn't start talking right away, type: *"I just cloned this project, can you help me get set up?"*
+**What you do:** follow what Claude says. When it confirms Node.js is ready, move to the next step.
 
 ---
 
-## Step 3 — Claude checks your Node.js version
+## Step 3 — Ask Claude to clone the repository
 
-Claude will run a quick check to make sure your Node.js is up to date.
+Now ask Claude to download the tutorial project to your computer.
 
-**What Claude does:** runs `node -v` in the terminal and reads the version.
+**What you type to Claude:**
+> *"Please clone this repository for me: https://github.com/andrebernardi-hue/designtek-claude-101.git and open it"*
 
-**What you do:** nothing — just wait. If there's a problem, Claude will tell you exactly what to do.
+**What Claude does:** runs the `git clone` command, downloads the project into your current folder, and opens it.
+
+**What you do:** wait for it to finish, then confirm Claude is now working inside the project folder. You'll know because the terminal prompt will show the folder name `designtek-claude-101`.
 
 ---
 
-## Step 4 — Install the starter template
+## Step 4 — Claude reads the project and greets you
 
-Claude will install the app's dependencies for you.
+The moment Claude opens the project, it reads a setup file that tells it exactly what to do next. You don't need to explain anything.
 
-**What Claude does:** runs `npm install` inside the `starter-template` folder. You'll see a lot of text scroll by — that's normal. It's downloading the libraries the app needs.
+**What Claude does:** reads the project guide automatically and starts walking you through setup.
+
+**What you do:** if Claude doesn't start on its own, type:
+> *"I just cloned this project, can you help me get set up?"*
+
+---
+
+## Step 5 — Install the starter template dependencies
+
+Claude installs all the libraries the app needs.
+
+**What Claude does:** runs `npm install` inside the `starter-template` folder. You'll see a lot of text scroll by — that's normal.
 
 **What you do:** wait for it to finish. It usually takes about 30–60 seconds.
 
 ---
 
-## Step 5 — Start the app and open it in your browser
+## Step 6 — Start the app and open it in your browser
 
-Claude will start the development server.
+Claude starts the development server.
 
 **What Claude does:** runs `npm run dev`. The terminal will show something like:
 
@@ -97,37 +87,37 @@ Claude will start the development server.
 ```
 
 **What you do:**
-1. Open your browser (Safari, Chrome, or Firefox)
+1. Open your browser (Chrome, Firefox, or Safari)
 2. Go to **http://localhost:5173**
 3. You should see a dark screen with an animated card that fades in and says **"Start building."**
 
-Tell Claude it loaded. If it didn't, paste any error messages from the terminal into the Claude chat and it will help you fix it.
+Tell Claude it loaded. If it didn't load, paste any error messages from the terminal into the Claude chat and it will fix it.
 
 ---
 
-## Step 6 — Create your personal project folder
+## Step 7 — Create your personal project folder
 
-Now you'll make a copy of the starter app that belongs to you.
+Now you make a copy of the starter app that belongs to you.
 
-**What Claude does:** stops the server and copies the starter template into a new folder under `projects/` named after you.
+**What you type to Claude:**
+> *"Create my project folder. My name is [your name]."*
 
-**What you do:** tell Claude your name or handle when it asks. For example:
-> *"My name is Sofia"* → your folder becomes `projects/sofia`
+**What Claude does:** copies the starter template into a new folder under `projects/` named after you — for example `projects/sofia` — and installs dependencies inside it.
 
-Claude will run the copy and install commands automatically.
+**What you do:** wait for Claude to finish, then move to the next step.
 
 ---
 
-## Step 7 — Start your app and confirm it works
+## Step 8 — Start your app and confirm it works in the browser
 
-Claude starts your personal app.
+Claude starts your personal version of the app.
 
 **What Claude does:** runs `npm run dev` inside your new folder.
 
 **What you do:**
 1. Go back to your browser
 2. Open **http://localhost:5173** again
-3. You should see the same animated card — but now it's running from your folder
+3. You should see the same animated card — but now it's running from your personal folder
 
 This is your canvas. Everything you build from here lives in:
 
@@ -139,7 +129,7 @@ projects/your-name/src/
 
 ## You're ready
 
-When your app is running in the browser, you're set up. Tell Claude you're ready to start building and the tutorial begins.
+When your app is running in the browser, setup is complete. Tell Claude you're ready to start building and the class begins.
 
 ---
 
@@ -152,11 +142,11 @@ Every time you save a file, the browser refreshes instantly. You don't need to r
 All your files are inside `projects/your-name/src/`. The main file you'll edit is `App.tsx`.
 
 **The dev server.**
-Keep the terminal with `npm run dev` running while you work. If you close it by accident, just run `npm run dev` again from your project folder.
+Keep the terminal with `npm run dev` running while you work. If you close it by accident, just run `npm run dev` again from inside your project folder.
 
 **The AI skills.**
 This project has 28 design skills pre-loaded. You can ask Claude to use them at any time:
-- `/audit` — get a design review of what you've built
+- `/audit` — design quality review of what you've built
 - `/animate` — add motion to your UI
 - `/polish` — refine the visual details
 - `/ui-ux-pro-max` — generate a full design system from a description
@@ -170,6 +160,6 @@ Only edit files inside your own `projects/your-name/` folder. Leave `starter-tem
 
 ## If something goes wrong
 
-Don't panic — just describe what happened to Claude and it will help you fix it. You can also paste any error messages directly into the chat.
+Don't panic — describe what happened to Claude and it will help you fix it. You can also paste any error messages directly into the chat.
 
 See you in class.
